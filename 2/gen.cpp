@@ -1,6 +1,7 @@
 #include <ctime>
 #include <cstdio>
 #include <cstdlib>
+<<<<<<< HEAD
 #define rand(l,h) (rand()%(h-l+1)+l)
 
 const int MXN = 10000;

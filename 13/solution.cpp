@@ -14,6 +14,11 @@ typedef long long ll;
 #define f first
 #define s second
 
+int n;
+
 int main() {
+    scanf("%d", &n);
+    for (int i = 0; i < n; ++i) {
+
 }
 
