@@ -1,21 +1,19 @@
 #include <ctime>
 #include <cstdio>
 #include <cstdlib>
-#include <string>
+<<<<<<< HEAD
 #define rand(l,h) (rand()%(h-l+1)+l)
 
-const int MXV = 1e3;
+const int MXN = 10000;
 
-int main(int argc, char **argv)
+int main()
 {
     srand(time(0));
 
-    if (argc > 1) MXN = atoi(argv[1]);
-    else { printf("run this executable with the requested N.\n"); return 0; }
-
     printf("%d\n", MXN);
     for (int i=0; i<MXN; ++i)
-        printf("%d\n", rand(1, MXV));
+        printf("%d ", rand(1, 1000));
+    printf("\n");
 
     return 0;
 }
