@@ -28,7 +28,7 @@ public class Hanoi
             }
             statesSeen.put(curTowersStr, true);
             
-            System.out.println(curState.iteration + "," + curTowersStr);
+            //System.out.println(curState.iteration + "," + curTowersStr);
             
             if (curState.towersMatch(endState))
             {
