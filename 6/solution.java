@@ -14,6 +14,7 @@ public class solution {
 		  for(int i=0; i<N; i++)
 				System.out.printf("%d ", arr[i][j]);
 			System.out.println();
+		s.close();
 		}
 	}
 }
