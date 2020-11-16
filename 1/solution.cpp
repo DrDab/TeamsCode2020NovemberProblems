@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -15,5 +14,6 @@ typedef long long ll;
 #define s second
 
 int main() {
+    printf(" /\\   /\\\n//\\\\_//\\\\\n\\_     _/\n / * * \\\n \\_\\O/_/\n");
 }
 
