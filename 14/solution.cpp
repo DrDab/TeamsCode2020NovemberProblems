@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -17,26 +16,24 @@ typedef long long ll;
 const int maxn = 1e6 + 100;
 
 int n, k, m;
-int a[maxn], sum[maxn];
+int a[maxn], mq[maxn], l=0, r=1;
 
 int main() {
     scanf("%d%d%d", &n, &k, &m);
-    for (int i = 0; i < n; ++i) {
+    for (int i=0; i<n; ++i)
+    {
         scanf("%d", &a[i]);
     }
-    int sm = 0;
-    for (int i = 0; i < k - 1; ++i) {
-        sm += a[i];
-    }
-    for (int i = k - 1; i < n; ++i) {
-        sm += a[i];
-        sum[i - k + 1] = sm;
-        sm -= a[i - k + 1];
+    for (int i=0; i<n; ++i)
+    {
+        for (; r>l && mq[r-1] < a[i]; --r); // pop from back of mq until the last number is larger than a[i]
+        mq[r++] = a[i];
+        a[i] = mq[l];
     }
     for (int i = 0; i < m; ++i) {
         int x;
         scanf("%d", &x);
-        printf("%d\n", sum[x - 1]);
+        printf("%d\n", a[x - 1]);
     }
 }
 
