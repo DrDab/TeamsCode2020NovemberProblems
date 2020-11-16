@@ -9,7 +9,7 @@ int main()
     {
         int a, b;
         scanf("%d%d", &a, &b);
-        array[a] = b;
+        array[a] += b;
     }
     for (int i=1; i<=N; ++i)
         printf("%d ", array[i]);

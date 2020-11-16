@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <cstdio>
 using namespace std;
 string s;
 string ans;
@@ -15,19 +17,19 @@ int main()
         {
             if (c == "LLL")
             {
-                ans += "A";
+                printf("A");
             }
             else if (c == "SSL")
             {
-                ans += "T";
+                printf("T");
             }
             else if (c == "SLL")
             {
-                ans += "G";
+                printf("G");
             }
             else if (c == "SLS")
             {
-                ans += "C";
+                printf("C");
             }
             c.clear();
         }
