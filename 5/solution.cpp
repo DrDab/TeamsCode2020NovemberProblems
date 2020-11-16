@@ -17,13 +17,14 @@ typedef long long ll;
 int n;
 
 int main() {
-    scanf("%d", &n);
-    int ans = 0;
-    while (n > 0) {
-        ans += n % 10;
-        n /= 100;
+    while (scanf("%d", &n) == 1) {
+        int ans = 0;
+        while (n > 0) {
+            ans += n % 10;
+            n /= 100;
+        }
+        printf("%d\n", ans);
     }
-    printf("%d", ans);
 }
 
 
