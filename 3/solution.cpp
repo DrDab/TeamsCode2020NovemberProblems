@@ -1,10 +1,17 @@
 #include <cstdio>
 
-int h1, m1, d;
+int count = 0;
+char out, cur = 0;
 
 int main()
 {
-    scanf("%d:%d%d", &h1, &m1, &d);
-    printf("%02d:%02d\n", h1+(m1+d)/60, (m1+d)%60);
+    out = getchar();
+
+    while (cur != '\n') {           // stop when we get a newline
+        cur = getchar();            // get the next character
+        if (cur == out) ++count;    // increment the count if it matches
+    }
+
+    printf("%d\n", count);
 }
 
