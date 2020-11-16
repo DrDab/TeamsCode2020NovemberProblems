@@ -1,10 +1,10 @@
 #include <cstdio>
 
-int h1, m1, h2, m2;
+int h1, m1, d;
 
 int main()
 {
-    scanf("%d:%d%d:%d", &h1, &m1, &h2, &m2);
-    printf("%02d:%02d\n", h1+h2+(m1+m2)/60, (m1+m2)%60);
+    scanf("%d:%d%d", &h1, &m1, &d);
+    printf("%02d:%02d\n", h1+(m1+d)/60, (m1+d)%60);
 }
 
