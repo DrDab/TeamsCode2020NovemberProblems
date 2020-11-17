@@ -13,6 +13,6 @@ int main()
     cout << n << " " << s << " " << w << endl;
     for (int i = 0; i < n; i++)
     {
-        cout << rand(0, 100) << " " << rand(0, s / 79) << " " << rand(0, w / 79) << endl;
+        cout << rand(10, 1000) << " " << rand(s / 89, s / 49) << " " << rand(w / 89, s / 49) << endl;
     }
 }
