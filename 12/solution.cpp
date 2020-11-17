@@ -2,6 +2,7 @@
 using namespace std;
 int s[105];
 int w[105];
+int v[105];
 int dp[505][505];
 int main()
 {
@@ -9,7 +10,7 @@ int main()
     cin >> n >> ms >> mw;
     for (int i = 1; i <= n; i++)
     {
-        cin >> s[i] >> w[i];
+        cin >> v[i] >> s[i] >> w[i];
     }
     for (int i = 1; i <= n; i++)
     {
@@ -17,7 +18,7 @@ int main()
         {
             for (int k = mw; k >= w[i]; k--)
             {
-                dp[j][k] = max(dp[j][k], dp[j - s[i]][k - w[i]] + 1);
+                dp[j][k] = max(dp[j][k], dp[j - s[i]][k - w[i]] + v[i]);
             }
         }
     }
