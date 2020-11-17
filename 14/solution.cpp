@@ -24,19 +24,17 @@ int main() {
     {
         scanf("%d", &a[i]);
     }
-    // insert k elements into the mq at the beginning
     for (int i=1; i<=k; ++i)
     {
         for (; r>l && mq[r-1] < a[n-i]; --r); // pop from back of mq until the last number is larger than a[i]
         mq[r++] = a[n-i];
     }
-    // push the mq through the rest of the array
     for (int i=k+1; i<=n; ++i)
     {
         for (; r>l && mq[r-1] < a[n-i]; --r);
         mq[r++] = a[n-i];
         if (mq[l] == a[n-i+k]) ++l;
-        ans[i] = mq[l];   // store the maximum in the answer array which will be used to answer queries
+        ans[n-i] = mq[l];
     }
     for (int i = 0; i < m; ++i) {
         int x;
