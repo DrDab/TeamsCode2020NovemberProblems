@@ -8,7 +8,7 @@ public class solution {
 		int m = Integer.parseInt(st.nextToken());
 		int c = s.nextInt();
 		
-		System.out.printf("%02d:%02d\n", (h+(m+c)/60)%12, (m+c)%60);
+		System.out.printf("%02d:%02d\n", (h+(m+c)/60)%24, (m+c)%60);
 		s.close();
 	}
 }
