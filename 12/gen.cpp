@@ -1,23 +1,18 @@
-#include <ctime>
-#include <cstdio>
-#include <cstdlib>
-#define rand(l,h) (rand()%(h-l+1)+l)
-
-const int MXV = 1e2;
-
-int main(int argc, char **argv)
+#include <bits/stdc++.h>
+using namespace std;
+int rand(int min, int max)
+{
+    return min + rand() % (max - min + 1);
+}
+int main()
 {
     srand(time(0));
-
-    int N = 0;
-
-    if (argc > 1) N = atoi(argv[1]);
-    else { printf("run with number of items as input\n"); return 0; }
-
-    printf("%d %d\n", N, rand(1, N*MXV/2));
-    while (N--)
-        printf("%d %d\n", rand(0, MXV), rand(0, MXV));
-
-    return 0;
+    const int n = 100;
+    const int s = rand(400, 500);
+    const int w = rand(400, 500);
+    cout << n << " " << s << " " << w << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout << rand(10, 1000) << " " << rand(s / 89, s / 49) << " " << rand(w / 89, s / 49) << endl;
+    }
 }
-

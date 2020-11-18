@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -14,27 +13,34 @@ typedef long long ll;
 #define f first
 #define s second
 
-int n, b;//original number n in base b
-int b10;//number in base 10
+int t; // number of cases
+ll n, b;//original number n in base b
+ll b10;//number in base 10
 
 int main() {
-    scanf("%d%d", &n, &b);
-    int pw = 1;
-    while (n > 0) {
-        b10 += pw * (n % 10);
-        pw *= b;
-        n /= 10;
-    }
-    pw = 1;
-    while (pw <= b10) pw *= 2;
-    pw /= 2;
-    while (pw > 0) {
-        if (b10 >= pw) {
-            printf("1");
-            b10 -= pw;
+    scanf("%d", &t);
+    while (t--)
+    {
+        scanf("%lld%lld", &b, &n);
+        ll pw = 1;
+        while (n > 0) {
+            b10 += pw * (n % 10);
+            pw *= b;
+            n /= 10;
         }
-        else printf("0");
+        pw = 1;
+        while (pw <= b10) pw *= 2;
         pw /= 2;
+        if (!pw) printf("0");
+        while (pw > 0) {
+            if (b10 >= pw) {
+                printf("1");
+                b10 -= pw;
+            }
+            else printf("0");
+            pw /= 2;
+        }
+        printf("\n");
     }
 }
 
