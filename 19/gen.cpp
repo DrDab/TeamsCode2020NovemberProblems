@@ -7,13 +7,13 @@ using namespace std;
 
 set<pair<int, int> > vis;
 
-int N = 500;
-int MX = 300;
+int N = 1000000;
+int MX = 1e9;
 
 int main()
 {
     srand(time(0));
-    printf("%d %d\n", N, rand(2*MX/5, 3*MX/5));
+    printf("%d %d\n", N, 100000);
     for (int i=0; i<N; ++i)
     {
         int x, y;

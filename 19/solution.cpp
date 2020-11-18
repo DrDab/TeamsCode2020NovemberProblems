@@ -9,6 +9,8 @@ using namespace std;
 const int MX = 1e6;
 int N, R, ax[MX], y[MX];
 
+int cnt=0;
+
 double dist(int i, int j)
 {
     return sqrt((double)(ax[i]-ax[j])*(ax[i]-ax[j]) + (double)(y[i]-y[j])*(y[i]-y[j]));
