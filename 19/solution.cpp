@@ -53,13 +53,12 @@ int main()
         auto lower = lower_bound(active.begin(), active.end(), make_pair(y[i]-R, -1));
         auto upper = upper_bound(active.begin(), active.end(), make_pair(y[i]+R, N+1));
         for (auto a=lower; a!=upper; ++a)
-            for (auto b=lower; b!=upper; ++b)
+            for (auto b=a; b!=upper; ++b)
             {
-                printf("points %d, %d, %d => %lf\n", a->second, b->second, i, area(a->second, b->second, i));
                 if (a->second != b->second) ans = max(ans, area(a->second, b->second, i));
             }
         set<pair<int, int> >::iterator g = active.insert(make_pair(y[i], i)).first;
         rem.push(make_pair(x, g));
     }
-    printf("%lld\n", (long long)(ans*1000));
+    printf("%.0lf\n", (ans*1000));
 }

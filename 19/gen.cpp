@@ -7,8 +7,8 @@ using namespace std;
 
 set<pair<int, int> > vis;
 
-int N = 100;
-int MX = 50;
+int N = 500;
+int MX = 300;
 
 int main()
 {

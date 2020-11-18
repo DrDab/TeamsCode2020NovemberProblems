@@ -29,10 +29,10 @@ int main()
     for (int i=0; i<N; ++i) scanf("%d%d", ax+i, y+i);
     double ans=0;
     for (int i=0; i<N; ++i)
-        for (int j=i+1; j<N; ++j)
-            for (int k=j+1; k<N; ++k)
+        //for (int j=i+1; j<N; ++j) for (int k=j+1; k<N; ++k)
+        for (int j=0; j<N; ++j) for (int k=0; k<N; ++k)
                 //printf("%d %d %d\n", i, j, k),
                 ans = max(ans, area(i, j, k));
-    printf("%lld\n", (long long)(ans*1000));
+    printf("%.0lf\n", (ans*1000));
 }
 
