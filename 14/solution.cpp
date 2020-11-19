@@ -29,6 +29,7 @@ int main() {
         for (; r>l && mq[r-1] < a[n-i]; --r); // pop from back of mq until the last number is larger than a[i]
         mq[r++] = a[n-i];
     }
+    for (int i=0; i<=k; ++i) ans[n-i] = mq[l];
     for (int i=k+1; i<=n; ++i)
     {
         for (; r>l && mq[r-1] < a[n-i]; --r);
