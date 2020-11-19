@@ -14,6 +14,6 @@ typedef long long ll;
 #define s second
 
 int main() {
-    printf(" /\\   /\\\n//\\\\_//\\\\\n\\_     _/\n / * * \\\n \\_\\O/_/\n");
+    printf("    ______    ____\n   (      )  |  o |\n  |        |/ ___U|\n@_|_________/\n  |_|_| |_|_|\n");
 }
 
