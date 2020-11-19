@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -8,6 +7,7 @@
 #include <utility>
 #include <map>
 #include <list>
+#include <queue>
 using namespace std;
 typedef pair <int, int> pii;
 typedef long long ll;
@@ -19,7 +19,7 @@ double med;
 priority_queue <int, vector <int>, less <int> > lo;
 priority_queue <int, vector <int>, greater <int> > hi;
 
-void ins(int x) {
+void med_ins(int x) {
     if (med < x) {
         if (hi.size() > lo.size()) {
             lo.push(hi.top());
@@ -48,16 +48,20 @@ void ins(int x) {
     }
 }
 
+int get_mode()
+{
+    return 0;
+}
+
 int main() {
     scanf("%d", &n);
+    ll prev=0, mn=0, mx=0, sum=0;
     for (int i = 0; i < n; ++i) {
-        int op, x;
-        scanf("%d", &op);
-        if (op == 1) {//insert new num
-            scanf("%d", &x);
-            ins(x);
-        }
-        if (op == 2) printf("%lf\n", med); //median
+        int x; scanf("%d", &x);
+        med_ins(x);
+        if (!i) mn = mx = x;
+        sum += x;
+        printf("%lld %lld %.0lf %.0lf %d", mn, mx, (double)sum / (i+1), med, get_mode());
         /*if (op == 3) //mean
         if (op == 4) //min
         if (op == 5) //max
