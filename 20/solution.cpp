@@ -55,5 +55,6 @@ int main() {
             chk = 1;
         }
     }
+    if (!chk) printf("No");
 }
 
