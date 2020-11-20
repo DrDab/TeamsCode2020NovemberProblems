@@ -1,6 +1,6 @@
 #include <cstdio>
 
-int N, M, matrix[110][110];
+int N, M, matrix[1010][1010];
 
 int main()
 {

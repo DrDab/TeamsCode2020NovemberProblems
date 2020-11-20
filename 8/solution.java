@@ -16,5 +16,6 @@ public class solution {
 				case "SLS": System.out.print("C"); break;
 			}
 		}
+        System.out.print("\n");
 	}
 }

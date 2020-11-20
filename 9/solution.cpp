@@ -1,22 +1,16 @@
 #include <cstdio>
 
 int Q, N, matrix[35][35];
-bool count[30*30+10];   // make sure that we have each number
 int rows[35], cols[35], diag1=0, diag2=0;
 
 bool check()
 {
     scanf("%d", &N);                                // get size of square
-    for (int i=1; i<=N*N; ++i) count[i] = 0;        // clear the count
     for (int i=1; i<=N; ++i)
         for (int j=1; j<=N; ++j)                    // for each cell
         {
             scanf("%d", &matrix[i][j]);             // input into the matrix and
-            count[matrix[i][j]] = 1;                // remember that we have this number
         }
-
-    for (int i=1; i<=N*N; ++i)
-        if (!count[i]) return 0;                    // if we don't have a number, return false
 
     for (int i=1; i<=N; ++i)
         rows[i] = cols[i] = 0;                      // clear row and column counts
