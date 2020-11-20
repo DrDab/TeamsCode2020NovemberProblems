@@ -32,7 +32,7 @@ public class Hanoi
             
             if (curState.towersMatch(endState))
             {
-                System.out.println(curState.iteration);
+                System.out.println(curState.iteration + "\n");
                 break;
             }
             

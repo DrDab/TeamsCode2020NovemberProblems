@@ -1,8 +1,12 @@
-#include <bits/stdc++.h>
+#include <unordered_map>
+#include <unordered_set>
+#include <string>
+#include <queue>
+#include <iostream>
 #define umap unordered_map
 #define uset unordered_set
 using namespace std;
-queue<umap<int, string>> q;
+queue<umap<int, string> > q;
 queue<int> s;
 uset<string> p;
 int main()
