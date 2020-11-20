@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -23,11 +22,11 @@ int loc[maxn], cnt = 0;
 
 void dfs(int u, int p, int d) {
     loc[u] = cnt;
-    st[0][cnt++] = {d, u};
+    st[0][cnt++] = make_pair(d, u);
     for (auto v : edge[u]) {
         if (v == p) continue;
         dfs(v, u, d + 1);
-        st[0][cnt++] = {d, u};
+        st[0][cnt++] = make_pair(d, u);
     }
 }
 

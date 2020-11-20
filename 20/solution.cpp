@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -55,6 +54,7 @@ int main() {
             chk = 1;
         }
     }
-    if (!chk) printf("No important cities.");
+    if (!chk) printf("No");
+    printf("\n");
 }
 
