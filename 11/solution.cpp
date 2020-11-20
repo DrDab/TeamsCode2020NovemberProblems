@@ -14,7 +14,7 @@ typedef long long ll;
 #define s second
 
 int n, a[100100], m;
-int psum[100100];
+int psum[100100];//psum[i] is the sum of a[1...i] 
 
 int main() {
     scanf("%d%d", &n, &m);
