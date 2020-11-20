@@ -27,15 +27,17 @@ def dfs(cur, pre, dep):
             if nxt is not pre:
                 dfs(nxt, cur, dep+1)
                 sparse[0].append((dep, cur))
-
-
 dfs(1, 0, 1)
-for lay in range(1,20):
+
+
+for lay in range(0,20):
+    # print(sparse[-1])
     sparse.append([])
-    for i in range(len(sparse[0])-(2**lay)+1):
-        sparse[-1].append(min(sparse[-2][i], sparse[-2][int(i+2**(lay-1))]))
+    # print('lay', lay)
+    for i in range(0, len(sparse[-2])-(2**(lay))):
         # print(i, int(i+2**(lay-1)), sparse[-2][i], sparse[-2][int(i+2**(lay-1))], "            ", min(sparse[-2][i], sparse[-2][int(i+2**(lay-1))]), sparse[-1][-1])
-        # print(sparse[-1])
+        # print('    ', i, i+2**lay)
+        sparse[-1].append(min(sparse[-2][i], sparse[-2][int(i+2**lay)]))
     # print("\n");
 
 # for num in occ: print(num, occ[num])
@@ -45,11 +47,9 @@ from math import log2
 def query(u, v):
     u = occ[u]
     v = occ[v]
-    if u == v: return u
+    # if u == v: return u
     if u < v: u, v = v, u
-    lay = int(log2(u-v))
-    # print(u, v, lay)
-    # print(lay, v, u-2**lay+1)
+    lay = int(log2(u-v+1))
     return min(sparse[lay][v], sparse[lay][u-2**lay+1])[1]
 
 
