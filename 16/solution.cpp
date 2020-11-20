@@ -16,7 +16,7 @@ typedef long long ll;
 
 const int maxn = 1e6 + 10;
 
-int n; double med;
+int n, med;
 priority_queue <int, vector <int>, less <int> > lo;
 priority_queue <int, vector <int>, greater <int> > hi;
 int cnt, mode;
@@ -28,12 +28,12 @@ void med_ins(int x) {
             lo.push(hi.top());
             hi.pop();
             hi.push(x);
-            med = (double)(lo.top() + hi.top()) / 2;
+            med = (lo.top() + hi.top()) / 2;
         }
         else {
             hi.push(x);
             if (hi.size() > lo.size()) med = hi.top();
-            else med = (double)(lo.top() + hi.top()) / 2;
+            else med = (lo.top() + hi.top()) / 2;
         }
     }
     else {
@@ -41,12 +41,12 @@ void med_ins(int x) {
             hi.push(lo.top());
             lo.pop();
             lo.push(x);
-            med = (double)(lo.top() + hi.top()) / 2;
+            med = (lo.top() + hi.top()) / 2;
         }
         else {
             lo.push(x);
             if (lo.size() > hi.size()) med = lo.top();
-            else med = (double)(lo.top() + hi.top()) / 2;
+            else med = (lo.top() + hi.top()) / 2;
         }
     }
 }
@@ -57,7 +57,7 @@ int main() {
     ll sum=0;
     for (int i = 0; i < n; ++i) {
         int x; scanf("%d", &x);
-        x ^= (int)round(med); // decryption
+        x ^= med; // decryption
         med_ins(x);
         mp[x]++;
         if (mp[x] >= cnt) {
@@ -68,7 +68,7 @@ int main() {
         mn = min(mn, x);
         mx = max(mx, x);
         sum += x;
-        printf("%d %d %.0lf %0.lf %d\n", mn, mx, (double)sum / (i+1), med, mode);
+        printf("%d %d %lld %d %d\n", mn, mx, sum, med, mode);
     }
 }
 
