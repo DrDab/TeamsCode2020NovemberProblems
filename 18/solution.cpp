@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -8,6 +7,7 @@
 #include <utility>
 #include <map>
 #include <list>
+#include <queue>
 using namespace std;
 typedef pair <int, int> pii;
 typedef long long ll;
@@ -38,6 +38,6 @@ int main() {
         int nv = (a[x] - (cur[x] + 1) * b[x]) * (cur[x] + 1) - (a[x] - cur[x] * b[x]) * cur[x];
         pq.push({nv, x});
     }
-    printf("%lld", ans);
+    printf("%lld\n", ans);
 }
 
