@@ -3,11 +3,8 @@
 #include <cstdio>
 using namespace std;
 string s;
-string ans;
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
     cin >> s;
     string c;
     for (int i = 0; i < s.size(); i++)
@@ -34,6 +31,5 @@ int main()
             c.clear();
         }
     }
-    cout << ans << endl;
     return 0;
 }
