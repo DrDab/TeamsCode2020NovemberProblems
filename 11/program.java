@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ZygoteDisplacement
+public class program
 {
     public static void main(String[] args)
     {
