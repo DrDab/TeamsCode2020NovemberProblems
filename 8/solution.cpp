@@ -31,5 +31,6 @@ int main()
             c.clear();
         }
     }
+    cout << endl;
     return 0;
 }

@@ -9,7 +9,7 @@ using namespace std;
 
 string codes[] = {"LLL", "SSL", "SLL", "SLS"};
 
-int N = 10000000;
+int N = 100000;
 
 int main()
 {
