@@ -10,7 +10,7 @@ public class ZygoteDisplacement
         int M = Integer.parseInt(l1[1]);
         String[] l2 = input.nextLine().split(" ");
         int[] pSum = new int[N];
-        int[] answers = new int[N];
+        int[] answers = new int[M];
         for (int i = 0; i < N; i++)
         {
             int cur = Integer.parseInt(l2[i]);
