@@ -1,7 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-const int n = 10000;
-const int m = 10000000;
+const int n = 100000;
+const int m = 1000000;
 int rand(int min, int max)
 {
     return min + rand() % (max - min + 1);
