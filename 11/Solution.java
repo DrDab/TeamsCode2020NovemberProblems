@@ -24,5 +24,6 @@ public class ZygoteDisplacement
         {
             System.out.println(answers[i]);
         }
+        System.out.println("\n");
     }
 }
