@@ -4,7 +4,7 @@
 #define rand(l,h) (rand()%(h-l+1)+l)
 
 int N = 100000;
-int M = 10000000;
+int M = 1000000;
 
 int main()
 {
