@@ -6,7 +6,7 @@
 int arr[110];
 
 int N = 100;
-int M = 10000000;
+int M = 1000000;
 
 int main()
 {
